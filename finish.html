@@ -35,20 +35,6 @@
             document.querySelector('.ingredients').textContent = selectedDrink.ingredients;
         }
     });
-
-    function playAmbient() {
-        const music = document.querySelector('#ambientSound');
-
-        music.volume = 0.1;
-
-        window.onload = function () {
-            music.play().catch(error => {
-                console.log('Erreur lors de la lecture de la musique:', error);
-            });
-        };
-    }
-
-    playAmbient();
 </script>
 <script src="app.js"></script>
 
