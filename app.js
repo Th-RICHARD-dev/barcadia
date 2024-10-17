@@ -45,7 +45,6 @@ async function app() {
 
   const slideSound = new Audio('sounds/cards_slide.wav')
   slideSound.playbackRate = 1.5;
-  slideSound.volume = 2.5;
 
   function buildSlider() {
     const swiper = new Swiper('.swiper', {
@@ -61,6 +60,7 @@ async function app() {
     swiper.on('slideChange', function () {
       slideSound.currentTime = 0;
       slideSound.play();
+      slideSound.volume = 2.5;
     });
 
     document.querySelector('.button').addEventListener('click', function () {
