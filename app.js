@@ -66,9 +66,9 @@ async function app() {
       const activeIndex = swiper.realIndex;
       const selectedDrink = drinks[activeIndex];
       localStorage.setItem('selectedDrink', JSON.stringify(selectedDrink));
-      window.setTimeout( function() {
-      window.location.href = "finish.html";
-    }, 500)
+      window.setTimeout(function () {
+        window.location.href = "finish.html";
+      }, 500)
     });
   }
 
@@ -142,6 +142,18 @@ async function app() {
   }
 
   soundPlay();
+
+  function playAmbient() {
+    const music = document.querySelector('#ambientSound');
+
+    music.volume = 0.1;
+
+    music.play().catch(error => {
+      console.log('Erreur lors de la lecture de la musique:', error);
+    });
+  }
+
+  playAmbient();
 }
 
 app();

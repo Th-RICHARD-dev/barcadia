@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="icon" type="image/x-icon" href="drink.ico">
     <link rel="stylesheet" href="finish.css">
 </head>
+
 <body>
     <div class="container">
         <header>
@@ -17,6 +19,8 @@
         </div>
         <a class="button" href="index.html">Terminer</a>
     </div>
+
+    <audio id="ambientSound" src="sounds/ambient.mp3" preload="auto" loop></audio>
 </body>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -31,6 +35,17 @@
             document.querySelector('.ingredients').textContent = selectedDrink.ingredients;
         }
     });
+    function playAmbient() {
+        const music = document.querySelector('#ambientSound');
+
+        music.volume = 0.1;
+
+        music.play().catch(error => {
+            console.log('Erreur lors de la lecture de la musique:', error);
+        });
+    }
+    playAmbient();
 </script>
 <script src="app.js"></script>
+
 </html>
