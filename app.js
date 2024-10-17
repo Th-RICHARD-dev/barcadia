@@ -146,7 +146,7 @@ async function app() {
   function playAmbient() {
     const music = document.querySelector('#ambientSound');
     
-    music.volume = 0.1;
+    music.volume = 0.05;
 
     document.addEventListener('click', () => {
       music.play().catch(error => {
