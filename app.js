@@ -60,7 +60,6 @@ async function app() {
     swiper.on('slideChange', function () {
       slideSound.currentTime = 0;
       slideSound.play();
-      slideSound.volume = 2.5;
     });
 
     document.querySelector('.button').addEventListener('click', function () {
