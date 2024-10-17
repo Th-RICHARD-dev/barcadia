@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barcad'ia | Choix</title>
+    <link rel="icon" type="image/x-icon" href="drink.ico">
+    <link rel="stylesheet" href="finish.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h2>Vous avez selectionne : <span class="finalDrink"></span></h2>
+        </header>
+        <div class="boisson">
+            <img class="boissons" src="" alt="">
+        </div>
+        <a class="button" href="index.html">Terminer</a>
+    </div>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const selectedDrink = JSON.parse(localStorage.getItem('selectedDrink'));
+        if (selectedDrink) {
+            document.querySelector('.finalDrink').textContent = selectedDrink.title;
+            document.querySelector('.boissons').src = selectedDrink.image;
+            document.querySelector('.desc').textContent = selectedDrink.description;
+            document.querySelector('.quant').textContent = selectedDrink.contenant;
+            document.querySelector('.stars').src = selectedDrink.etoiles;
+            document.querySelector('.bottom').textContent = selectedDrink.credit;
+            document.querySelector('.ingredients').textContent = selectedDrink.ingredients;
+        }
+    });
+</script>
+<script src="app.js"></script>
+</html>

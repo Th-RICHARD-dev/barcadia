@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Horizontal Slider</title>
+  <title>Barcad'ia | Boissons</title>
   <link rel="icon" type="image/x-icon" href="drink.ico">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -277,7 +277,7 @@
       <div class="swiper-pagination"></div>
     </div>
 
-    <button onclick="playSound()" class="button">Choisir</button>
+    <button onclick="buttonOnClick()" class="button">Choisir</button>
 
   </div>
 
@@ -290,13 +290,12 @@
 
 </body>
 <script>
-  function playSound() {
+  function buttonOnClick() {
     const playBuy = document.getElementById('buySound');
     playBuy.playbackRate = 2;
-    playBuy.play();
+    playBuy.play();    
   }
 </script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="app.js"></script>
-
 </html>

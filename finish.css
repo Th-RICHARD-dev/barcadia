@@ -1,0 +1,59 @@
+@font-face {
+    font-family: Arcade_N;
+    src: url(fonts/ARCADE_N.TTF);
+}
+
+@font-face {
+    font-family: Arcade_I;
+    src: url(fonts/ARCADE_I.TTF);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    --primary: #000;
+    --secondary: #f82dd2;
+    --tertiary: #37095d;
+    --details: #f5ee2d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arcade_I', sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+body {
+    overflow: hidden;
+}
+
+.container {
+    background-image: url('images/frame.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.button {
+    background-color: var(--secondary);
+    width: 250px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: larger;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid;
+    border-color: var(--primary);
+    text-decoration: none;
+  }

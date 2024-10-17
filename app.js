@@ -61,6 +61,15 @@ async function app() {
       slideSound.currentTime = 0;
       slideSound.play();
     });
+
+    document.querySelector('.button').addEventListener('click', function () {
+      const activeIndex = swiper.realIndex;
+      const selectedDrink = drinks[activeIndex];
+      localStorage.setItem('selectedDrink', JSON.stringify(selectedDrink));
+      window.setTimeout( function() {
+      window.location.href = "finish.html";
+    }, 500)
+    });
   }
 
   buildSlider();
