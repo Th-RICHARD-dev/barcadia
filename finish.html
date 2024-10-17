@@ -41,10 +41,8 @@
 
         music.volume = 0.1;
 
-        document.addEventListener('click', () => {
-            music.play().catch(error => {
-                console.log('Erreur lors de la lecture de la musique:', error);
-            });
+        music.play().catch(error => {
+            console.log('Erreur lors de la lecture de la musique:', error);
         });
     }
 
