@@ -145,11 +145,13 @@ async function app() {
 
   function playAmbient() {
     const music = document.querySelector('#ambientSound');
-
+    
     music.volume = 0.1;
 
-    music.play().catch(error => {
-      console.log('Erreur lors de la lecture de la musique:', error);
+    document.addEventListener('click', () => {
+      music.play().catch(error => {
+        console.log('Erreur lors de la lecture de la musique:', error);
+      });
     });
   }
 
