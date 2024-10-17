@@ -45,6 +45,7 @@ async function app() {
 
   const slideSound = new Audio('sounds/cards_slide.wav')
   slideSound.playbackRate = 1.5;
+  slideSound.volume = 2.5;
 
   function buildSlider() {
     const swiper = new Swiper('.swiper', {
@@ -146,8 +147,6 @@ async function app() {
   function playAmbient() {
     const music = document.querySelector('#ambientSound');
     
-    music.volume = 0.05;
-
     document.addEventListener('click', () => {
       music.play().catch(error => {
         console.log('Erreur lors de la lecture de la musique:', error);
